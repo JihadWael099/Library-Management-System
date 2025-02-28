@@ -3,13 +3,15 @@ package com.example.Library.Management.System.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "book")
 public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "bookID" ,length = 11)
+    @Column(name = "book_id" ,length = 11)
     private int bookID;
 
     @Column(name = "title" ,length = 50)
@@ -22,6 +24,16 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "publisherId")
     private Publisher publisher;
+
+
+
+    @OneToMany(mappedBy = "book")
+    private Set<Borrow> borrows;
+
+
+
+    public Book(String title) {
+    }
 
     public int getBookID() {
         return bookID;

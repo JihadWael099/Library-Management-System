@@ -14,7 +14,7 @@ public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
-    @Column(name = "publisherId", length = 11)
+    @Column(name = "publisher_id", length = 11)
     private int publisherId;
 
     @Column(name = "name" , length = 50)

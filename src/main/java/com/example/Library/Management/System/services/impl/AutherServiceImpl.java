@@ -69,7 +69,7 @@ public class AutherServiceImpl implements AutherService {
         {
             return "Delete Author Fail";
         }
-        return null;
+        return "can,t delete author";
     }
 
 

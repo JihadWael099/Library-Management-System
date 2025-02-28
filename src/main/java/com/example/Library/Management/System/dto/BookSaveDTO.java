@@ -15,4 +15,8 @@ public class BookSaveDTO {
     private String title;
     private int auther_id;
     private int publisher_id;
+
+    public BookSaveDTO(String title) {
+        this.title = title;
+    }
 }

@@ -49,10 +49,10 @@ public class PublisherServiceImpl implements PublisherService {
             Publisher publisher = publisherRepo.getById(publisherUpdateDTO.getPublisherId());
             publisher.setName(publisherUpdateDTO.getName());
             publisherRepo.save(publisher);
-            return "Update Author Success : " + publisher.getName();
+            return "Update publisher Success : " + publisher.getName();
         }
         else {
-            return "Update Author Fail publisher not found" ;
+            return "Update publisher Fail publisher not found" ;
         }
     }
 
@@ -65,6 +65,6 @@ public class PublisherServiceImpl implements PublisherService {
         {
             return "Delete publisher Fail";
         }
-        return null;
+        return "can,t delete publisher success";
     }
 }

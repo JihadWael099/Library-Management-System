@@ -12,7 +12,7 @@ public class Auther {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "autherId" , length = 11)
+    @Column(name = "auther_id" , length = 11)
     private int autherId;
 
     @Column(name = "name" , length = 50)

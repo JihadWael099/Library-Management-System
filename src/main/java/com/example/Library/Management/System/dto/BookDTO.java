@@ -18,4 +18,7 @@ public class BookDTO {
     private String title;
     private Auther auther;
     private Publisher publisher;
+
+    public BookDTO(int bookID, String title) {
+    }
 }
