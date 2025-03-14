@@ -15,13 +15,12 @@ public class Borrow {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name ="user_id")
-    private Book book;
-
-    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
 
     @JoinColumn(name = "borrowDate")
     private LocalDate borrowDate;

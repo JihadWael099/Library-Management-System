@@ -15,7 +15,6 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
     private int id;
 
     @Column(name = "username" ,length = 11)
@@ -28,8 +27,9 @@ public class User {
     private String password;
 
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "user")
     private Set<Borrow> borrows;
+
 
     public User(String username, String email, String password) {
         this.username = username;

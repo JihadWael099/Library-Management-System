@@ -11,7 +11,7 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "book_id" ,length = 11)
+    @Column(length = 11)
     private int bookID;
 
     @Column(name = "title" ,length = 50)
@@ -27,8 +27,11 @@ public class Book {
 
 
 
-    @OneToMany(mappedBy = "book")
-    private Set<Borrow> borrows;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+
 
 
 

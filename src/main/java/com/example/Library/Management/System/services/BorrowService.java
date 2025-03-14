@@ -9,4 +9,5 @@ public interface BorrowService {
     String add(BorrowSaveDTO borrowSaveDTO);
 
     List<BorrowDTO> getAll();
+    String updateBorrow(BorrowUpdateDTO borrowUpdateDTO);
 }
